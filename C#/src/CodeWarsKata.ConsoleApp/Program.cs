@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using CodeWarsKata.ClassLib;
 
 namespace CodeWarsKata.ConsoleApp
@@ -46,6 +47,20 @@ namespace CodeWarsKata.ConsoleApp
             Console.Write("Shortest Word: {0} - (\"Hello, I love you won't you tell me your name!\")\n", cwk.FindShort("Hello, I love you won't you tell me your name!"));
             Console.Write("Shortest Word: {0} - (\"You say goodbye and I say Hello!\")\n", cwk.FindShort("You say goodbye and I say Hello!"));
             Console.Write("Shortest Word: {0} - (\"Raining blood!!\")\n\n", cwk.FindShort("Raining blood!"));
+
+            //Fake Binary
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("Fake Binary: {0} - (\"0123456789\")\n", cwk.FakeBin("0123456789"));
+            Console.Write("Fake Binary: {0} - (\"9126345078129\")\n", cwk.FakeBin("9126345078129"));
+            Console.Write("Fake Binary: {0} - (\"85949039984572667471\")\n", cwk.FakeBin("85949039984572667471"));
+            Console.Write("Fake Binary: {0} - (\"0594837264759860397215\")\n\n", cwk.FakeBin("0594837264759860397215"));
+
+            //Remove Smallest in List
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(string.Join(", ", cwk.RemoveSmallest(new List<int> { 1, 2, 3, 4, 5 })));
+            Console.WriteLine(string.Join(", ", cwk.RemoveSmallest(new List<int> { 10, -2, 3, 4, 55, -400 })));
+            Console.WriteLine(string.Join(", ", cwk.RemoveSmallest(new List<int> { 2, 2, 1, 2, 1 })));
+            Console.WriteLine(string.Join(", ", cwk.RemoveSmallest(new List<int>())));
 
             Console.ReadKey();
         }
