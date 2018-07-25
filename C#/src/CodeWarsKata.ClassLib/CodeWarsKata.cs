@@ -45,9 +45,22 @@ namespace CodeWarsKata.ClassLib
             if(!numbers.Any()) return numbers;
 
             var num = numbers.Min();
-            Console.WriteLine(num);
             numbers.Remove(num);
             return numbers;
+        }
+
+        public string greet() {
+            string hex = "68 65 6c 6c 6f 20 77 6f 72 6c 64",
+                   answer = "";
+
+            foreach (string h in hex.Split(' '))
+            {
+                int hv = Convert.ToInt32(h, 16);
+                string sv = Char.ConvertFromUtf32(hv);
+                answer += sv;
+            }
+
+            return answer;
         }
     }
 }

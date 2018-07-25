@@ -57,10 +57,14 @@ namespace CodeWarsKata.ConsoleApp
 
             //Remove Smallest in List
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine(string.Join(", ", cwk.RemoveSmallest(new List<int> { 1, 2, 3, 4, 5 })));
-            Console.WriteLine(string.Join(", ", cwk.RemoveSmallest(new List<int> { 10, -2, 3, 4, 55, -400 })));
-            Console.WriteLine(string.Join(", ", cwk.RemoveSmallest(new List<int> { 2, 2, 1, 2, 1 })));
-            Console.WriteLine(string.Join(", ", cwk.RemoveSmallest(new List<int>())));
+            Console.WriteLine("Remove Smallest: {0}\n", string.Join(", ", cwk.RemoveSmallest(new List<int> { 1, 2, 3, 4, 5 })));
+            Console.WriteLine("Remove Smallest: {0}\n", string.Join(", ", cwk.RemoveSmallest(new List<int> { 10, -2, 3, 4, 55, -400 })));
+            Console.WriteLine("Remove Smallest: {0}\n", string.Join(", ", cwk.RemoveSmallest(new List<int> { 2, 2, 1, 2, 1 })));
+            Console.WriteLine("Remove Smallest: {0}\n\n", string.Join(", ", cwk.RemoveSmallest(new List<int>())));
+
+            //Hello World
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine(cwk.greet());
 
             Console.ReadKey();
         }
