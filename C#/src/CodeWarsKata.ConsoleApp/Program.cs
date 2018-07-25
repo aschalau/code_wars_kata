@@ -64,7 +64,13 @@ namespace CodeWarsKata.ConsoleApp
 
             //Hello World
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine(cwk.greet());
+            Console.WriteLine(cwk.greet() + "\n");
+
+            //Reverse Words
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("Reverse of Hello World is: {0}\n", cwk.ReverseWords("Hello World"));
+            Console.WriteLine("Reverse of I love you is: {0}\n", cwk.ReverseWords("I love you"));
+            Console.WriteLine("Reverse of Lucille is so beautiful! is: {0}\n", cwk.ReverseWords("Lucille is so beautiful!"));
 
             Console.ReadKey();
         }

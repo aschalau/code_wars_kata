@@ -62,5 +62,20 @@ namespace CodeWarsKata.ClassLib
 
             return answer;
         }
+
+        public string ReverseWords(string str) {
+            string[] arr = str.Split(' ');
+            string final = "";
+
+            foreach(string w in arr) {
+                char[] rev = w.Reverse().ToArray();
+
+                foreach(char l in rev) {
+                    final += l;
+                }
+                final += " ";
+            }
+            return final.Trim();
+        }
     }
 }
