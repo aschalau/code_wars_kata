@@ -63,14 +63,19 @@ namespace CodeWarsKata.ConsoleApp
             Console.WriteLine("Remove Smallest: {0}\n\n", string.Join(", ", cwk.RemoveSmallest(new List<int>())));
 
             //Hello World
-            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(cwk.greet() + "\n");
 
             //Reverse Words
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("Reverse of Hello World is: {0}\n", cwk.ReverseWords("Hello World"));
             Console.WriteLine("Reverse of I love you is: {0}\n", cwk.ReverseWords("I love you"));
-            Console.WriteLine("Reverse of Lucille is so beautiful! is: {0}\n", cwk.ReverseWords("Lucille is so beautiful!"));
+            Console.WriteLine("Reverse of Lucille is so beautiful! is: {0}\n\n", cwk.ReverseWords("Lucille is so beautiful!"));
+
+            //Switch It Up
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Switch It Up 1: {0}\n", cwk.SwitchItUp(1));
+            Console.WriteLine("Switch It Up 5: {0}\n", cwk.SwitchItUp(5));
 
             Console.ReadKey();
         }
