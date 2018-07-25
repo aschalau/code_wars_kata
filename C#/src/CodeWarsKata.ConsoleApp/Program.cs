@@ -75,7 +75,13 @@ namespace CodeWarsKata.ConsoleApp
             //Switch It Up
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("Switch It Up 1: {0}\n", cwk.SwitchItUp(1));
-            Console.WriteLine("Switch It Up 5: {0}\n", cwk.SwitchItUp(5));
+            Console.WriteLine("Switch It Up 5: {0}\n\n", cwk.SwitchItUp(5));
+
+            //Find Average
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Find Average of 1, 2, 3: {0}\n", cwk.FindAverage(new double[] { 1, 2, 3 }));
+            Console.WriteLine("Find Average of 4, 5, 6, 28 , 2: {0}\n", cwk.FindAverage(new double[] { 4, 5, 6, 28, 2 }));
+            Console.WriteLine("Find Average of 56, 234, 655, 9: {0}\n\n", cwk.FindAverage(new double[] { 56, 234, 655, 9 }));
 
             Console.ReadKey();
         }

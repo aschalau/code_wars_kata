@@ -90,5 +90,12 @@ namespace CodeWarsKata.ClassLib
                                                 { 9, "Nine"},
                                                 { 0, "Zero"}}[number];
         }
+
+        public double FindAverage(double[] array)
+        {
+            if(array == null || array.Length == 0) return 0;
+            return array.Sum(x => x) / array.Length;
+        }
+
     }
 }
