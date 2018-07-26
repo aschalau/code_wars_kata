@@ -1,8 +1,9 @@
 language: csharp
 mono: none
 dotnet: 2.1.4
-script:
+install:
   - dotnet restore
+script:
   - dotnet build ./src/CodeWarsKata.ClassLib/
   - dotnet build ./src/CodeWarsKata.ConsoleApp/
-  - dotnet run --project ./src/CodeWarsKata.ConsoleApp/CodeWarsKata.ConsoleApp.csproj
+  # - dotnet run --project ./src/CodeWarsKata.ConsoleApp/CodeWarsKata.ConsoleApp.csproj
