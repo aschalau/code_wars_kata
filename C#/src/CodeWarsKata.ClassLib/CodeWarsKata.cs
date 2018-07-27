@@ -106,6 +106,7 @@ namespace CodeWarsKata.ClassLib
             for (; n > 0; n--) {
                 answer += s;
             }
+
             return answer;
         }
 
