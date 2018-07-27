@@ -97,5 +97,9 @@ namespace CodeWarsKata.ClassLib
             return array.Sum(x => x) / array.Length;
         }
 
+        public int MakeNegative(int number) {
+            return number < 0 ? number : -number;
+        }
+
     }
 }

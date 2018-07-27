@@ -83,6 +83,12 @@ namespace CodeWarsKata.ConsoleApp
             Console.WriteLine("Find Average of 4, 5, 6, 28 , 2: {0}\n", cwk.FindAverage(new double[] { 4, 5, 6, 28, 2 }));
             Console.WriteLine("Find Average of 56, 234, 655, 9: {0}\n\n", cwk.FindAverage(new double[] { 56, 234, 655, 9 }));
 
+            //Make Negative
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Make Negative -1: {0}", cwk.MakeNegative(-1));
+            Console.WriteLine("Make Negative 5: {0}", cwk.MakeNegative(5));
+            Console.WriteLine("Make Negative 0: {0}", cwk.MakeNegative(0));
+
             Console.ReadKey();
         }
     }
