@@ -101,5 +101,13 @@ namespace CodeWarsKata.ClassLib
             return number < 0 ? number : -number;
         }
 
+        public string repeatStr(int n, string s) {
+            string answer = "";
+            for (; n > 0; n--) {
+                answer += s;
+            }
+            return answer;
+        }
+
     }
 }

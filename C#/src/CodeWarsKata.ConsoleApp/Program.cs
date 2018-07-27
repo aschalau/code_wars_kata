@@ -89,6 +89,11 @@ namespace CodeWarsKata.ConsoleApp
             Console.WriteLine("Make Negative 5: {0}", cwk.MakeNegative(5));
             Console.WriteLine("Make Negative 0: {0}", cwk.MakeNegative(0));
 
+            //Repeat String
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine("Repeat String Hello 6x: {0}", cwk.repeatStr(6, "Hello"));
+            Console.WriteLine("Repeat String I 10x: {0}", cwk.repeatStr(10, "I"));
+
             Console.ReadKey();
         }
     }
