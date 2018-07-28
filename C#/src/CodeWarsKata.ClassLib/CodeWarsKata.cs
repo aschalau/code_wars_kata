@@ -6,28 +6,8 @@ namespace CodeWarsKata.ClassLib
 {
     public class CodeWarsKataFunctions
     {
-        public int SquareSum(int[] n) {
-            int total = 0;
-            foreach (int num in n) {
-                total += (int)Math.Pow(num, 2);
-            }
-
-            return total;
-        }
-
-        public int Multiply(int a, int b) {
-            return a * b;
-        }
-
-        public int FindSmallestInteger(int[] n) {
-            return n.Min();
-        }
-
-        public int FindShort(string s) {
-            return s.Split(' ').Min(x => x.Length);
-        }
-
-        public string FakeBin(string x) {
+        public string FakeBin(string x)
+        {
             string answer = "";
             foreach(char n in x.ToCharArray()) {
                 if (Char.GetNumericValue(n) < 5) {
@@ -40,16 +20,24 @@ namespace CodeWarsKata.ClassLib
             return answer;
         }
 
-        public List<int> RemoveSmallest(List<int> numbers)
+        public double FindAverage(double[] array)
         {
-            if(!numbers.Any()) return numbers;
-
-            var num = numbers.Min();
-            numbers.Remove(num);
-            return numbers;
+            if (array == null || array.Length == 0) return 0;
+            return array.Sum(x => x) / array.Length;
         }
 
-        public string greet() {
+        public int FindShort(string s)
+        {
+            return s.Split(' ').Min(x => x.Length);
+        }
+
+        public int FindSmallestInteger(int[] n)
+        {
+            return n.Min();
+        }
+
+        public string greet()
+        {
             string hex = "68 65 6c 6c 6f 20 77 6f 72 6c 64",
                    answer = "";
 
@@ -63,14 +51,47 @@ namespace CodeWarsKata.ClassLib
             return answer;
         }
 
-        public string ReverseWords(string str) {
+        public int MakeNegative(int number)
+        {
+            return number < 0 ? number : -number;
+        }
+
+        public int Multiply(int a, int b)
+        {
+            return a * b;
+        }
+
+        public List<int> RemoveSmallest(List<int> numbers)
+        {
+            if (!numbers.Any()) return numbers;
+
+            var num = numbers.Min();
+            numbers.Remove(num);
+            return numbers;
+        }
+
+        public string repeatStr(int n, string s)
+        {
+            string answer = "";
+            for (; n > 0; n--)
+            {
+                answer += s;
+            }
+
+            return answer;
+        }
+
+        public string ReverseWords(string str)
+        {
             string[] arr = str.Split(' ');
             string final = "";
 
-            foreach(string w in arr) {
+            foreach (string w in arr)
+            {
                 char[] rev = w.Reverse().ToArray();
 
-                foreach(char l in rev) {
+                foreach (char l in rev)
+                {
                     final += l;
                 }
                 final += " ";
@@ -78,7 +99,19 @@ namespace CodeWarsKata.ClassLib
             return final.Trim();
         }
 
-        public string SwitchItUp(int number) {
+        public int SquareSum(int[] n)
+        {
+            int total = 0;
+            foreach (int num in n)
+            {
+                total += (int)Math.Pow(num, 2);
+            }
+
+            return total;
+        }
+
+        public string SwitchItUp(int number)
+        {
             return new Dictionary<int, string> {{ 1, "One" },
                                                 { 2, "Two"},
                                                 { 3, "Three"},
@@ -90,25 +123,5 @@ namespace CodeWarsKata.ClassLib
                                                 { 9, "Nine"},
                                                 { 0, "Zero"}}[number];
         }
-
-        public double FindAverage(double[] array)
-        {
-            if(array == null || array.Length == 0) return 0;
-            return array.Sum(x => x) / array.Length;
-        }
-
-        public int MakeNegative(int number) {
-            return number < 0 ? number : -number;
-        }
-
-        public string repeatStr(int n, string s) {
-            string answer = "";
-            for (; n > 0; n--) {
-                answer += s;
-            }
-
-            return answer;
-        }
-
     }
 }
