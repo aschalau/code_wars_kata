@@ -6,6 +6,12 @@ namespace CodeWarsKata.ClassLib
 {
     public class CodeWarsKataFunctions
     {
+
+        public int ExpressionsMatter(int a, int b, int c)
+        {
+            return Math.Max(a * (b + c), Math.Max(a * b * c, Math.Max( a + b * c, Math.Max((a + b) * c, a + b + c))));
+        }
+
         public string FakeBin(string x)
         {
             string answer = "";

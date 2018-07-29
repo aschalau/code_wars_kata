@@ -19,6 +19,12 @@ namespace CodeWarsKata.ConsoleApp
 
             CodeWarsKataFunctions cwk = new CodeWarsKataFunctions();
 
+            //Expressions Matter
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Expressions Matter: {0}\n", cwk.ExpressionsMatter(2, 1, 2));
+            Console.Write("Expressions Matter: {0}\n", cwk.ExpressionsMatter(1, 1, 1));
+            Console.Write("Expressions Matter: {0}\n\n", cwk.ExpressionsMatter(10, 05, 06));
+
             //Fake Binary
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.Write("Fake Binary: {0} - (\"0123456789\")\n", cwk.FakeBin("0123456789"));

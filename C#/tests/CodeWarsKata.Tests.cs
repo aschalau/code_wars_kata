@@ -14,6 +14,19 @@ namespace tests
         }
 
         [Theory]
+        [InlineData(2, 1, 2, 6)]
+        [InlineData(1, 1, 1, 3)]
+        [InlineData(2, 1, 1, 4)]
+        [InlineData(1, 2, 3, 9)]
+        [InlineData(5, 1, 3, 020)]
+        [InlineData(10, 05, 06, 300)]
+        public void ExpressionsMatterTest(int valueA, int valueB, int valueC, int expected)
+        {
+            var result = _cwk.ExpressionsMatter(valueA, valueB, valueC);
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
         [InlineData("0123456789", "0000011111")]
         [InlineData("9126345078129", "1001001011001")]
         [InlineData("85949039984572667471", "11101001110110111010")]
