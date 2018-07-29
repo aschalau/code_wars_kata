@@ -84,6 +84,18 @@ namespace tests
             Assert.Equal(expected, result);
         }
 
+        [Theory]
+        [InlineData(new int[] { 1, 2, 3, 4, 5 }, 15)]
+        [InlineData(new int[] { 1, -2, 3, 4, 5 }, 13)]
+        [InlineData(new int[] { -1, 2, 3, 4, -5 }, 9)]
+        [InlineData(new int[] { }, 0)]
+        [InlineData(new int[] { -1, -2, -3, -4, -5 }, 0)]
+        public void PositiveSumTest(int[] value, int expected)
+        {
+            var result = _cwk.PositiveSum(value);
+            Assert.Equal(expected, result);
+        }
+
         // TODO: Figure out how to pass in List<int> or new List<int>
         //       Two using statemtents are commented out from this as well
         // [Theory]

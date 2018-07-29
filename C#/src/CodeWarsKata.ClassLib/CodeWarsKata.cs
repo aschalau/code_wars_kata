@@ -61,6 +61,11 @@ namespace CodeWarsKata.ClassLib
             return a * b;
         }
 
+        public int PositiveSum(int[] arr)
+        {
+            return (from n in arr where n > 0 select n).Sum();
+        }
+
         public List<int> RemoveSmallest(List<int> numbers)
         {
             if (!numbers.Any()) return numbers;
