@@ -61,6 +61,11 @@ namespace CodeWarsKata.ClassLib
             return a * b;
         }
 
+        public int Opposite(int number)
+        {
+            return -number;
+        }
+
         public int PositiveSum(int[] arr)
         {
             return (from n in arr where n > 0 select n).Sum();

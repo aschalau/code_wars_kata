@@ -85,6 +85,16 @@ namespace tests
         }
 
         [Theory]
+        [InlineData(-1, 1)]
+        [InlineData(5, -5)]
+        [InlineData(0, 0)]
+        public void OppositeTest(int value, int expected)
+        {
+            var result = _cwk.Opposite(value);
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
         [InlineData(new int[] { 1, 2, 3, 4, 5 }, 15)]
         [InlineData(new int[] { 1, -2, 3, 4, 5 }, 13)]
         [InlineData(new int[] { -1, 2, 3, 4, -5 }, 9)]

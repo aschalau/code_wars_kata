@@ -63,6 +63,12 @@ namespace CodeWarsKata.ConsoleApp
             Console.Write("Multiply: {0} - (45, 50)\n", cwk.Multiply(45, 50));
             Console.Write("Multiply: {0} - (4, 300)\n\n", cwk.Multiply(4, 300));
 
+            //Opposite
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Opposite of -1 is {0}\n", cwk.Opposite(-1));
+            Console.Write("Opposite of 5 is {0}\n", cwk.Opposite(5));
+            Console.Write("Opposite of 0 is {0}\n\n", cwk.Opposite(0));
+
             //Positive Sums
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.Write("Sum of Positive numbers (1, 2, 3, 4, 5) is {0}\n", cwk.PositiveSum(new int[] { 1, 2, 3, 4, 5 }));
