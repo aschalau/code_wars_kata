@@ -56,6 +56,13 @@ namespace CodeWarsKata.ConsoleApp
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.Write("Creative way to do \"hello world\": {0}\n\n", cwk.greet());
 
+            //Is Digit?
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Is {0} a digit? {1}\n", "3", cwk.IsDigit("3"));
+            Console.Write("Is {0} a digit? {1}\n", "-3", cwk.IsDigit("-3"));
+            Console.Write("Is {0} a digit? {1}\n", "zero", cwk.IsDigit("zero"));
+            Console.Write("Is {0} a digit? {1}\n\n", "4-6", cwk.IsDigit("4-6"));
+
             //Make Negative
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.Write("Make Negative -1: {0}\n", cwk.MakeNegative(-1));

@@ -77,6 +77,21 @@ namespace tests
         }
 
         [Theory]
+        [InlineData("3", true)]
+        [InlineData("  3  ", true)]
+        [InlineData("-3", true)]
+        [InlineData("3.14", true)]
+        [InlineData("-3.14", true)]
+        [InlineData("3   6", false)]
+        [InlineData("3-4", false)]
+        [InlineData("zero", false)]
+        public void IsDigitTest(string value, bool expected)
+        {
+            var result = _cwk.IsDigit(value);
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
         [InlineData(-1, -1)]
         [InlineData(5, -5)]
         [InlineData(0, 0)]

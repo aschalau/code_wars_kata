@@ -57,6 +57,11 @@ namespace CodeWarsKata.ClassLib
             return answer;
         }
 
+        public bool IsDigit(string s)
+        {
+            return double.TryParse(s, out double n);
+        }
+
         public int MakeNegative(int number)
         {
             return number < 0 ? number : -number;
