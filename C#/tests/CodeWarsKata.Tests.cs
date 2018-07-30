@@ -14,6 +14,15 @@ namespace tests
         }
 
         [Theory]
+        [InlineData(1, "Odd")]
+        [InlineData(2, "Even")]
+        public void EvenOrOddTest(int value, string expected)
+        {
+            var result = _cwk.EvenOrOdd(value);
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
         [InlineData(2, 1, 2, 6)]
         [InlineData(1, 1, 1, 3)]
         [InlineData(2, 1, 1, 4)]

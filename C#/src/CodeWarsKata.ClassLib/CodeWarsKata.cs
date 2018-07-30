@@ -7,6 +7,11 @@ namespace CodeWarsKata.ClassLib
     public class CodeWarsKataFunctions
     {
 
+        public string EvenOrOdd(int number)
+        {
+            return number % 2 == 0 ? "Even" : "Odd";
+        }
+
         public int ExpressionsMatter(int a, int b, int c)
         {
             return Math.Max(a * (b + c), Math.Max(a * b * c, Math.Max( a + b * c, Math.Max((a + b) * c, a + b + c))));
@@ -148,6 +153,11 @@ namespace CodeWarsKata.ClassLib
                                                 { 8, "Eight"},
                                                 { 9, "Nine"},
                                                 { 0, "Zero"}}[number];
+        }
+
+        public string Version()
+        {
+            return typeof(string).Assembly.ImageRuntimeVersion;
         }
     }
 }

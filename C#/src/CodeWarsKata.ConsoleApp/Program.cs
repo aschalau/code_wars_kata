@@ -19,6 +19,11 @@ namespace CodeWarsKata.ConsoleApp
 
             CodeWarsKataFunctions cwk = new CodeWarsKataFunctions();
 
+            //Even Or Odd
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Even or Odd: {0} {1}\n", 1, cwk.EvenOrOdd(1));
+            Console.Write("Even or Odd: {0} {1}\n\n", 2, cwk.EvenOrOdd(2));
+
             //Expressions Matter
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write("Expressions Matter: {0}\n", cwk.ExpressionsMatter(2, 1, 2));
@@ -125,6 +130,10 @@ namespace CodeWarsKata.ConsoleApp
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.Write("Switch It Up 1: {0}\n", cwk.SwitchItUp(1));
             Console.Write("Switch It Up 5: {0}\n\n", cwk.SwitchItUp(5));
+
+            //C# Version
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.Write("C# Version: {0}\n\n", cwk.Version());
 
             Console.ReadKey();
         }
