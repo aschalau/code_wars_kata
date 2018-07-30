@@ -126,6 +126,11 @@ namespace CodeWarsKata.ClassLib
             return total;
         }
 
+        public int Summation(int num)
+        {
+            return Enumerable.Range(0, num + 1).Sum();
+        }
+
         public string SwitchItUp(int number)
         {
             return new Dictionary<int, string> {{ 1, "One" },

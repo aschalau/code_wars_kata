@@ -108,6 +108,12 @@ namespace CodeWarsKata.ConsoleApp
             Console.Write("SquareSum: {0} - (5, 6, 7)\n", cwk.SquareSum(new int[] { 5, 6, 7 }));
             Console.Write("SquareSum: {0} - (3, 4, 5)\n\n", cwk.SquareSum(new int[] { 3, 4, 5 }));
 
+            //Summation
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Summation of 1: {0}\n", cwk.Summation(1));
+            Console.Write("Summation of 22: {0}\n", cwk.Summation(22));
+            Console.Write("Summation of 100: {0}\n\n", cwk.Summation(100));
+
             //Switch It Up
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.Write("Switch It Up 1: {0}\n", cwk.SwitchItUp(1));

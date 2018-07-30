@@ -164,6 +164,17 @@ namespace tests
         }
 
         [Theory]
+        [InlineData(1, 1)]
+        [InlineData(8, 36)]
+        [InlineData(22, 253)]
+        [InlineData(100, 5050)]
+        public void SummationTest(int value, int expected)
+        {
+            var result = _cwk.Summation(value);
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
         [InlineData(1, "One")]
         [InlineData(5, "Five")]
         public void SwitchItUpTest(int value, string expected)
