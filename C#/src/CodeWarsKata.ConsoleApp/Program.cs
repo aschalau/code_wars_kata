@@ -19,6 +19,11 @@ namespace CodeWarsKata.ConsoleApp
 
             CodeWarsKataFunctions cwk = new CodeWarsKataFunctions();
 
+            //Bool To Word
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Bool to Word: {0} {1}\n", true, cwk.BoolToWord(true));
+            Console.Write("Bool to Word: {0} {1}\n\n", false, cwk.BoolToWord(false));
+
             //Even Or Odd
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write("Even or Odd: {0} {1}\n", 1, cwk.EvenOrOdd(1));

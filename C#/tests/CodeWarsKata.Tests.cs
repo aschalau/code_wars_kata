@@ -14,6 +14,15 @@ namespace tests
         }
 
         [Theory]
+        [InlineData(true, "Yes")]
+        [InlineData(false, "No")]
+        public void BoolToWordTest(bool value, string expected)
+        {
+            var result = _cwk.BoolToWord(value);
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
         [InlineData(1, "Odd")]
         [InlineData(2, "Even")]
         public void EvenOrOddTest(int value, string expected)

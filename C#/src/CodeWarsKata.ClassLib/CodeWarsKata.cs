@@ -6,6 +6,10 @@ namespace CodeWarsKata.ClassLib
 {
     public class CodeWarsKataFunctions
     {
+        public string BoolToWord(bool word)
+        {
+            return word ? "Yes" : "No";
+        }
 
         public string EvenOrOdd(int number)
         {
