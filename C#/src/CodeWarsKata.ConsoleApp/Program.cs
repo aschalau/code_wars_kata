@@ -19,6 +19,12 @@ namespace CodeWarsKata.ConsoleApp
 
             CodeWarsKataFunctions cwk = new CodeWarsKataFunctions();
 
+            //Abbreviated Name
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Abbreviated Aaron Mina: {0}\n", cwk.AbbrevName("Aaron Mina"));
+            Console.Write("Abbreviated Zachary Howard: {0}\n", cwk.AbbrevName("Zachary Howard"));
+            Console.Write("Abbreviated christianne mina: {0}\n\n", cwk.AbbrevName("christianne mina"));
+
             //Bool To Word
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write("Bool to Word: {0} {1}\n", true, cwk.BoolToWord(true));

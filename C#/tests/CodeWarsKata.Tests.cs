@@ -14,6 +14,17 @@ namespace tests
         }
 
         [Theory]
+        [InlineData("Zachary Howard", "Z.H")]
+        [InlineData("Aaron Mina", "A.M")]
+        [InlineData("christianne Mina", "C.M")]
+        [InlineData("richard mina", "R.M")]
+        public void AbbrevNameTest(string value, string expected)
+        {
+            var result = _cwk.AbbrevName(value);
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
         [InlineData(true, "Yes")]
         [InlineData(false, "No")]
         public void BoolToWordTest(bool value, string expected)

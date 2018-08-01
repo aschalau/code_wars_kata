@@ -6,6 +6,11 @@ namespace CodeWarsKata.ClassLib
 {
     public class CodeWarsKataFunctions
     {
+        public string AbbrevName(string name)
+        {
+            return String.Join(".", name.Split(new[] { ' ' }).Select(l => l.First())).ToUpper();
+        }
+
         public string BoolToWord(bool word)
         {
             return word ? "Yes" : "No";
